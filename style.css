@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #333;
+}
+
+.dark-mode {
+    --background-color: #333;
+    --text-color: #f4f4f4;
+}
+
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+#username {
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 10px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+#searchBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#searchBtn:hover {
+    background-color: #0056b3;
+}
+input[type='checkbox'] {
+    height: 0;
+    width: 0;
+}
+label {
+    border-radius: 20px;
+    cursor: pointer;
+    height: 24px;
+    position: relative;
+    width: 50px;
+    margin-bottom: 10px;
+    background: gray;
+    float: right;
+    text-indent: -9999px;
+}
+
+label::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: '';
+    height: 20px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    width: 20px;
+    transition: 0.3s;
+}
+
+#switch:checked + label {
+    background: var(--color-heading);
+}
+
+#switch:checked + label::after {
+    left: calc(100% - 3px);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 45px;
+}
+
+#profile {
+    margin-top: 20px;
+}
+
+.profile-card {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.profile-card img {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-card div {
+    flex: 1;
+}
